@@ -31,6 +31,7 @@ export class UserService {
     let user = this.users.find((user: User) => user.id === id);
     if (!user) throw new HttpException('User not found', HttpStatus.NOT_FOUND);
 
+    // TODO: update неправильно работает
     user = {
       ...user,
       name: updateUser?.name,
