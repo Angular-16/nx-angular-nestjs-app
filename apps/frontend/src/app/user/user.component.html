@@ -1,0 +1,21 @@
+<form [formGroup]="form" (submit)="onSubmit()">
+    <label for="name">Name: </label>
+    <input id="name" type="text" formControlName="name" />
+
+    <label for="email">Email: </label>
+    <input id="email" type="email" formControlName="email" />
+
+    <button type="submit">create user</button>
+</form>
+<hr />
+<h3>list of users</h3>
+<button type="button" (click)="getUsers()">get users</button>
+<ul>
+    @if (users$ | async) {
+    @for (user of users$ | async; track user.id) {
+    <li>{{ user.name }}</li>
+    }
+    } @else {
+    <li>Users not found</li>
+    }
+</ul>
