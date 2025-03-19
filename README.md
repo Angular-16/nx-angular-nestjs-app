@@ -99,3 +99,9 @@ And join the Nx community:
 - [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
 - [Our Youtube channel](https://www.youtube.com/@nxdevtools)
 - [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+
+## Steps
+
+1. npx create-nx-workspace --preset=angular
+2. npm install -D @nrwl/nest
+3. npx nx g @nx/nest:app apps/api --frontendProject frontend
